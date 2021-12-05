@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ADAA914C-C1A2-467C-8935-C1F913BE0809}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RC_pro</RootNamespace>
+    <AssemblyName>RC pro</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="edit_kullanici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit_kullanici.Designer.cs">
+      <DependentUpon>edit_kullanici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sifremi unuttum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sifremi unuttum.Designer.cs">
+      <DependentUpon>sifremi unuttum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yonetici giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yonetici giris.Designer.cs">
+      <DependentUpon>yonetici giris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yonetici paneli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yonetici paneli.Designer.cs">
+      <DependentUpon>yonetici paneli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="giris ekrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="giris ekrani.Designer.cs">
+      <DependentUpon>giris ekrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mesajlar ekrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mesajlar ekrani.Designer.cs">
+      <DependentUpon>mesajlar ekrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="edit_kullanici.resx">
+      <DependentUpon>edit_kullanici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="giris ekrani.resx">
+      <DependentUpon>giris ekrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mesajlar ekrani.resx">
+      <DependentUpon>mesajlar ekrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="sifremi unuttum.resx">
+      <DependentUpon>sifremi unuttum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yonetici giris.resx">
+      <DependentUpon>yonetici giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yonetici paneli.resx">
+      <DependentUpon>yonetici paneli.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="RCDataSet.xsc">
+      <DependentUpon>RCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RCDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RCDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RCDataSet.xss">
+      <DependentUpon>RCDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
