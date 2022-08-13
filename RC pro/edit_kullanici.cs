@@ -18,7 +18,7 @@ namespace RC_pro
         
 
         public edit_kullanici()
-        { //Oğuzhan
+        { //Oğuzhan 
             InitializeComponent();
             con = new SqlConnection("server=.; database=RC; Integrated Security=True; ");
             
